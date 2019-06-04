@@ -9,14 +9,15 @@
 </head>
 <body>
     <div id="game-container"></div>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/game-objects-factory.js"></script>
+    <script src="./scripts/collision-detector.js"></script>
     <script src="./scripts/renderer.js"></script>
     <script src="./scripts/game.js"></script>
     <script>
-        const { game } = window;
-
-        game
-          .init('#game-container', 1900, 920)
-          .start();
+        const { Game } = window;
+        const game = new Game('#game-container', 1900, 920);
+        game.start();
     </script>
 </body>
 </html>
